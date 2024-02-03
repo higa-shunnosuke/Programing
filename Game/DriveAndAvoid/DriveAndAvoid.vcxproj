@@ -143,7 +143,7 @@
     <ClCompile Include="Object\Enemy.cpp" />
     <ClCompile Include="Object\Player.cpp" />
     <ClCompile Include="Object\RankingData.cpp" />
-    <ClCompile Include="Scene\RankingDespScene.cpp" />
+    <ClCompile Include="Scene\RankingDispScene.cpp" />
     <ClCompile Include="Scene\RankingInputScene.cpp" />
     <ClCompile Include="Scene\ResultScene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
@@ -157,7 +157,7 @@
     <ClInclude Include="Object\Enemy.h" />
     <ClInclude Include="Object\Player.h" />
     <ClInclude Include="Object\RankingData.h" />
-    <ClInclude Include="Scene\RankingDespScene.h" />
+    <ClInclude Include="Scene\RankingDispScene.h" />
     <ClInclude Include="Scene\RankingInputScene.h" />
     <ClInclude Include="Scene\ResultScene.h" />
     <ClInclude Include="Scene\SceneManager.h" />

@@ -1,2 +1,2 @@
 #include "GameMainScene.h"
-#include"../Object/RankingDate.h"
+#include"../Object/RankingData.h"

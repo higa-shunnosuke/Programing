@@ -26,5 +26,12 @@ public:
 	virtual void Finalize() override;
 
 	virtual eSceneType GetNowScene() const override;
+
+private:
+	//ハイスコア読込み処理
+	void ReadHighScore();
+
+	//当たり判定
+	bool IsHitCheck(Player* p, Enemy* e);
 };
 

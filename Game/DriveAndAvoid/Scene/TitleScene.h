@@ -8,7 +8,7 @@ private:
 
 private:
 	int background_image;	//背景画像
-	int meun_image;			//メニュー画像
+	int menu_image;			//メニュー画像
 	int cursor_image;		//カーソル画像
 	int menu_cursor;		//メニューカーソル番号
 

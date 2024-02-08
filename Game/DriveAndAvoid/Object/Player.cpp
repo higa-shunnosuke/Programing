@@ -18,16 +18,16 @@ Player::~Player()
 void Player::Initialize()
 {
 	is_active = true;
-	location = Vector2D(32.0f, 38.0f);
+	location = Vector2D(320.0f, 380.0f);
 	box_size = Vector2D(31.0f, 60.0f);
 	angle = 0.0f;
 	speed = 3.0f;
 	hp = 1000;
-	fuel = 20000;
+	fuel = 10000;
 	barrier_count = 3;
 
 	//画像読み込み
-	image = LoadGraph("Resource/image/car1pol.bmp");
+	image = LoadGraph("Resource/images/car1pol.bmp");
 
 	//エラーチェック
 	if (image==-1)
@@ -177,7 +177,7 @@ void Player::Movement()
 	if (InputControl::GetButton(XINPUT_BUTTON_DPAD_LEFT))
 	{
 		move += Vector2D(-1.0f, 0.0f);
-		angle = DX_PI_F / 18;
+		angle = DX_PI_F / -18;
 	}
 	if (InputControl::GetButton(XINPUT_BUTTON_DPAD_RIGHT))
 	{
@@ -195,7 +195,7 @@ void Player::Movement()
 
 	location += move;
 
-	//画面買いに行かないように制限する
+	//画面外に行かないように制限する
 	if ((location.x<box_size.x)||(location.x>=640.0f-180.0f)||
 		(location.y<box_size.y)||(location.y>=480.0f-box_size.y))
 	{
@@ -211,8 +211,8 @@ void Player::Acceleration()
 	{
 		speed -= 1.0f;
 	}
-	//RBボタンが押されたら、減速する
-	if (InputControl::GetButtonDown(XINPUT_BUTTON_RIGHT_SHOULDER)&&speed>1.0f)
+	//RBボタンが押されたら、加速する
+	if (InputControl::GetButtonDown(XINPUT_BUTTON_RIGHT_SHOULDER)&&speed<10.0f)
 	{
 		speed += 1.0f;
 	}
